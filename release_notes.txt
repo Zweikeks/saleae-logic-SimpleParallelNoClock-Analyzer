@@ -1,0 +1,36 @@
+Simple Parallel Analyzer noclock V1.0
+-------------------------------------
+
+Plugin for Saleae Logic Software. Analyzer for parallel data communication
+without a clock signal. The data word transmitted is re-evaluated on every
+data transition.
+
+Based on
+    SaleaeAnalyzerSdk-1.1.32.zip
+    SaleaeAnalyzerSource-1.1.32.zip SimpleParallelAnalyzer
+
+Works with
+    Logic+Setup+1.1.31.exe
+
+Project for
+    Visual Studio 2013 (Version 12.0)
+    Win32 Debug and Release (build but not tested)
+    x64   Debug and Release (works for me)
+    Run-time library statically linked.
+    Compiles and links without warnings or errors.
+
+Installation
+    Copy SimpleParallelNoClock.dll from Win32\Release or x64\Release to
+    c:\Program Files\Saleae LLC\Analyzers. (Re)start Logic.exe.
+    The new analyzer will automatically be loaded and show up in the list
+    of analyzers as 'Simple Parallel noclock' right below the included
+    'Simple Parallel'.
+
+Known problems
+    Displaying the data words above the waveform often needs a manual
+    triggered isplay refresh (by e.g. zooming in/out).
+    The very last data word is not displayed above the waveform. It is
+    visible in the lower right 'Decoded Protocols' pane, though.
+    Crashes if analyzer settings do not match the actual channel setup.
+    Debugging does not work. Starting Logic.exe from Visual Studio or
+    trying to attach the debugger to the already running process crashes.
