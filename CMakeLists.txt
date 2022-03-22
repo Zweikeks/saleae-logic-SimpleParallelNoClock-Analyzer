@@ -13,15 +13,6 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 include(ExternalAnalyzerSDK)
 
 set(SOURCES
-include/AnalyzerHelpers.h
-include/AnalyzerResults.h
-include/SimulationChannelDescriptor.h
-include/AnalyzerChannelData.h
-include/Analyzer.h
-include/LogicPublicTypes.h
-include/AnalyzerSettingInterface.h
-include/AnalyzerTypes.h
-include/AnalyzerSettings.h
 source/SimpleParallelNoClockAnalyzerResults.cpp
 source/SimpleParallelNoClockAnalyzerSettings.cpp
 source/SimpleParallelNoClockAnalyzer.h
