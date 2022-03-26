@@ -19,14 +19,14 @@ void SimpleParallelAnalyzer::SetupResults()
 {
 	mResults.reset( new SimpleParallelAnalyzerResults( this, mSettings.get() ) );
 	SetAnalyzerResults( mResults.get() );
+
+	//this is the channel where the BubbleText (the analyzer output values) will show up in the
+	//waveform window
+	mResults->AddChannelBubblesWillAppearOn( mSettings->mClockChannel );
 }
 
 void SimpleParallelAnalyzer::WorkerThread()
 {
-	//this is the channel where the BubbleText (the analyzer output values) will show up in the
-	//waveform window
-	mResults->AddChannelBubblesWillAppearOn( mSettings->mClockChannel );
-
 	//mSampleRateHz = GetSampleRate();
 
 	mData.clear();
